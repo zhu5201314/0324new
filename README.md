@@ -10,4 +10,4 @@ line
 get last value
 jjjj
 arr=$(echo $line )
-figure out [4] 
+figure out /entrypoint.sh: line 9: syntax error: bad substitution
