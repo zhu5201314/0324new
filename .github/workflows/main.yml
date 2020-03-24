@@ -20,4 +20,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Count Lines of Code (cloc)
-      uses: djdefi/cloc-action@2
+      uses: zhuorg/cloc-action@master
