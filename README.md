@@ -20,3 +20,4 @@ line5
  bad substitution
  #arr[-1]
 ------
+delete arr[-1]
