@@ -9,3 +9,4 @@ split the sum line
 line
 get last value
 jjjj
+arr=$(echo $line )
