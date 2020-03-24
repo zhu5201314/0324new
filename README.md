@@ -17,3 +17,4 @@ echo ${arr[4]}
 IFS=' ' read -r -a arr <<< "$line"
 crazy
 line5 
+ bad substitution
