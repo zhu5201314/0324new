@@ -13,3 +13,4 @@ arr=$(echo $line )
 figure out /entrypoint.sh: line 9: syntax error: bad substitution
 -----   
 new 2
+echo ${arr[4]}
