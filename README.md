@@ -18,7 +18,7 @@ IFS=' ' read -r -a arr <<< "$line"
 crazy
 line5 
  bad substitution
- #arr[-1]
+ #arr[-1]ss
 ------
 delete arr[-1]
 use IFS again
