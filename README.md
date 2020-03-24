@@ -21,3 +21,4 @@ line5
  #arr[-1]
 ------
 delete arr[-1]
+use IFS again
