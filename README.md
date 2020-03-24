@@ -25,3 +25,5 @@ use IFS again
 "$line"
 use cut 2
 
+#!/bin/bash
+
