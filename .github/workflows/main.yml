@@ -20,4 +20,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Count Lines of Code (cloc)
-      uses: zhuorg/cloc-action@aaf129d
+      uses: zhuorg/cloc-action@8c8d2ae
