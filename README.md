@@ -19,3 +19,4 @@ crazy
 line5 
  bad substitution
  #arr[-1]
+------
