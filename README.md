@@ -27,3 +27,4 @@ use cut 2
 
 #!/bin/bash
 bash
+use IFS again
