@@ -10,3 +10,4 @@ line
 get last value
 jjjj
 arr=$(echo $line )
+figure out [4] 
