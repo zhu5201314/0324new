@@ -14,3 +14,4 @@ figure out /entrypoint.sh: line 9: syntax error: bad substitution
 -----   
 new 2
 echo ${arr[4]}
+IFS=' ' read -r -a arr <<< "$line"
