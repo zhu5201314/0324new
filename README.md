@@ -23,3 +23,5 @@ line5
 delete arr[-1]
 use IFS again
 "$line"
+use cut
+
