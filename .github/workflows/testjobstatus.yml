@@ -9,14 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: echo hello
+    - run: echo exit 1
     - name: test success()
       if: success()
       run: echo hello
     
   job2:
     needs: job1
-    if: success()
+    if: failure()
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
