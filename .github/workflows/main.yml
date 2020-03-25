@@ -9,13 +9,11 @@ on:
 
 jobs:
   build:
-    env: 
-      key1: ${{secrets.test2}} 
-    runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2  
-    - run: echo $key1
-      if: ${{env.key1}} == 'aaa'
+    runs-on: macos-latest
+
+    steps: 
+    - run: csrutil status
+     
 
 
