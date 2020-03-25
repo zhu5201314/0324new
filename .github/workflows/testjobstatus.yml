@@ -1,0 +1,25 @@
+name: test job.status
+on: push
+jobs:
+
+  # This workflow contains a single job called "build"
+
+  job1:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: exit code 1
+    - name: test success()
+      if: success()
+      run: echo hello
+    
+   job2:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: exit code 1
+    - name test job.status
+      if job.status == 'success'
+      run: echo hello job status
