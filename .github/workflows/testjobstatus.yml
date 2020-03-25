@@ -1,5 +1,5 @@
 name: test job.status
-on: push
+on: check_suite
 jobs:
 
   # This workflow contains a single job called "build"
