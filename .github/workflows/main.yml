@@ -2,26 +2,20 @@
 
 name: CI
 
-# Controls when the action will run. Triggers the ssworkflow on push or pull request1
-# events but only for the master branch
 on:
   push:
      paths:
        - '**/main.yml'
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
     env: 
       key1: ${{secrets.test2}} 
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2  
     - run: echo $key1
       if: ${{env.key1}} == 'aaa'
-    #- name: Count Lines of Code (cloc)
-    #  uses: zhuorg/cloc-action@c538322
+
 
