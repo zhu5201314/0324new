@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: echo exit 1
+    - run: echo exit code 1
     - name: test success()
       if: success()
       run: echo hello
