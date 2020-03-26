@@ -26,5 +26,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
+      - uses: Adzz/elixir_run_tests_action@v2.0.0
 
