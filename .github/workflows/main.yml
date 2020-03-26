@@ -13,7 +13,7 @@ jobs:
       key1: ${{secrets.test2 }}
     runs-on: macos-latest
     steps: 
-    - run:   echo hello
+    - run: echo hello
       if: ${{env.key1}} == 'aaa'
 
 
