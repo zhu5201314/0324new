@@ -24,5 +24,5 @@ jobs:
            echo ::set-env name=ProgramFilesPath::%programfiles%
       - name: Dump env context 2
         env:
-          ENV_CONTEXT: ${{ toJson(env) }}
-        run: echo "$ENV_CONTEXT"
+          ENV_CONTEXT1: ${{ toJson(env) }}
+        run: echo "$ENV_CONTEXT1"
