@@ -1,9 +1,10 @@
 name: Lint commit messages
 on:
-  push:
-    branches:
-      - master
-  pull_request:
+  check_suite:
+  #push:
+  #  branches:
+  #    - master
+ # pull_request:
 jobs:
   commitlint:
     runs-on: ubuntu-latest
