@@ -30,3 +30,4 @@ bash
 use IFS again
 try
 ooo
+fff

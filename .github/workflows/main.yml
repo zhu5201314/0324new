@@ -3,28 +3,34 @@
 name: CI
 
 on:
-  push:
-     paths:
-       - '**/main.yml'
-
-
+  check_suite:
+  #push:
+  #   paths:
+  #     - '**/main.yml'
 
 jobs:
   run_tests:
-    runs-on: ubuntu-latest
-
-    services:
-      postgres:
-        image: postgres:11-alpine
-        env:
-          POSTGRES_USER: monster
-          POSTGRES_PASSWORD: monster
-        ports:
-          - "54321:5432"
-        # needed because the postgres container does not provide a healthcheck
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 10
-
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: Adzz/elixir_run_tests_action@v2.0.0
-
+      # env context is empty at the beginning
+      - name: Dump env context
+        env:
+          ENV_CONTEXT: ${{ toJson(env) }}
+        run: write-host "$env:ENV_CONTEXT1"
+      # set system ProgramFiles value to env ProgramFilesPath
+      - name: set env ProgramFiles
+        shell: cmd    
+        run: |
+           echo %programfiles%
+           echo ::set-env name=ProgramFilesPath::%programfiles%
+      # check env context again, now include ProgramFilesPath
+      - name: Dump env context 2
+        env:
+          ENV_CONTEXT1: ${{ toJson(env) }}
+        run: write-host "$env:ENV_CONTEXT1"
+      # Now you can use env.ProgramFilesPath
+      - name: Cache git
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.ProgramFilesPath }}\Git
+          key: ${{ runner.os }}-git-${{ hashFiles('**/main.yml') }}-1-
