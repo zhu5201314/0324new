@@ -24,7 +24,7 @@ delete arr[-1]
 use IFS again
 "$line"
 use cut 2
-
+ff
 #!/bin/bash
 bash
 use IFS again
