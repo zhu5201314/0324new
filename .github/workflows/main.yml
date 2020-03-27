@@ -7,8 +7,6 @@ on:
      paths:
        - '**/main.yml'
 
-
-
 jobs:
   run_tests:
     runs-on: windows-latest
@@ -16,7 +14,7 @@ jobs:
       - name: Dump env context
         env:
           ENV_CONTEXT: ${{ toJson(env) }}
-        run: echo "$ENV_CONTEXT"
+        run: write-host "$env:ENV_CONTEXT1"
       - name: set env ProgramFiles
         shell: cmd    
         run: |
