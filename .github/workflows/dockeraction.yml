@@ -15,4 +15,4 @@ jobs:
         with:
           fetch-depth: 0
       - name: Lint commit messages
-        uses: wagoid/commitlint-github-action@v1
+        uses: zhu5201314/DockerContainer_action@v1
