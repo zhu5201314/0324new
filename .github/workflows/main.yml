@@ -26,3 +26,8 @@ jobs:
         env:
           ENV_CONTEXT1: ${{ toJson(env) }}
         run: write-host "$env:ENV_CONTEXT1"
+      - name: Cache git
+        uses: actions/cache@v1
+        with:
+          path: ${{ env.ProgramFilesPath }}\Git
+          key: ${{ runner.os }}-git-${{ hashFiles('**/main.yml') }}-1-
