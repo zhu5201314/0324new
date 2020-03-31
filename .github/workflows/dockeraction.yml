@@ -19,5 +19,6 @@ jobs:
         uses: yanjingzhu/FirstJSAction@master
         with: 
           who-to-greet: "yan jingzhu"
-        continue-on-error: true
+        
       - run: echo "Hello"
+        if: always()
