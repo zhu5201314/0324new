@@ -1,9 +1,8 @@
 name: Lint commit messages
 on:
   push:
-  #push:
-  #  branches:
-  #    - master
+    branches:
+    - yan
  ## pull_request:
 jobs:
   commitlint:
