@@ -3,12 +3,7 @@
 name: CI
 
 on:
-  push:
-     paths:
-       - '**/main.yml'
-     branches:
-       - yan
-
+  check_suite:
 
 jobs:
   run_tests:
