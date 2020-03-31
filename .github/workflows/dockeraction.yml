@@ -12,8 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
-              
-      - run: echo $GITHUB_CONTEXT
+          fetch-depth: 0     
+      - run: |
+          echo $GITHUB_CONTEXT
+          git diff --name-only ${{ github.event.before }} ${{ github.event.after }} | tee change-list.txt
+      
         env:
            GITHUB_CONTEXT: ${{ tojson(github) }}
