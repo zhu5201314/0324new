@@ -6,8 +6,8 @@ on:
   push:
      paths:
        - '**/main.yml'
-
-
+     branches:
+       - master
 
 jobs:
   run_tests:
